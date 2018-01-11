@@ -1,0 +1,4 @@
+*  map of what's happening
+--better in a makefile..
+snohomish.sh: curl -> snohomish.txt
+readsitedata.js: input sitedara.txt, output 
