@@ -1,0 +1,33 @@
+{
+  "name": "riverdata",
+  "version": "0.0.1",
+  "description": "River data",
+  "main": "web.js",
+  "dependencies": {
+    "body-parser": "~1.15.0",
+    "express": "^4.16.3",
+    "mongodb": "^2.1.21",
+    "mongodb-core": "^3.1.7",
+    "node-fetch": "^2.2.0",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jim Traugott",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatraug/Words.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jatraug/Words/issues"
+  },
+  "homepage": "https://github.com/jatraug/Words"
+}

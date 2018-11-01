@@ -1,0 +1,10 @@
+* Workflow
+
+- curl -o 8-14ToOct31.json  https://waterservices.usgs.gov/nwis/iv/?sites=12155500\&startDt=2018-08-04\&format=json
+- modified readfile.js to read 8-14ToOct31.json and output json
+  with''time' and 'height'.
+- run node readfile.js > input.js
+- nvm use --delete-prefix v8.0.0
+- node catchup.js 
+
+
