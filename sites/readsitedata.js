@@ -13,16 +13,26 @@ var readData = function() {
 
 var parseAndRead = function(str) {
     var siteData = JSON.parse(str);
+    var line = "";
+    var first = true;
 
-///    console.log(siteData.value.timeSeries[0]);
+    ///    console.log(siteData.value.timeSeries[0]);
+    console.log("[");
     siteData.value.timeSeries.forEach (function(element, index, array) {
         if (element.variable.variableName === "Gage height, ft") {
-            console.log("{\"siteIndex\": \"" + element.sourceInfo.siteCode[0].value + "\", \"siteName\" : \"" + element.sourceInfo.siteName + "\"},");
+            if( first ===true){
+                first = false;
+                line = "";
+            }else{
+                line = ",";
+            }
+            line += "{\"siteIndex\": \"" + element.sourceInfo.siteCode[0].value + "\", \"siteName\" : \"" + element.sourceInfo.siteName + "\"}";
+            console.log(line);
         }
 //        console.log(element.sourceInfo.siteName);
 //        console.log(element.sourceInfo.siteCode[0].value);
     });
-
+    console.log("]");
 
 
 
