@@ -10,6 +10,13 @@ var readData = function() {
     return ind;
 };
 
+var hasGageHeight = function(ts) {
+    if (ts.variable.variableName === "Gage height, ft") {
+        return true;
+    }
+    return false;
+};
+
 
 var parseAndRead = function(str) {
     var siteData = JSON.parse(str);
@@ -19,7 +26,7 @@ var parseAndRead = function(str) {
     ///    console.log(siteData.value.timeSeries[0]);
     console.log("[");
     siteData.value.timeSeries.forEach (function(element, index, array) {
-        if (element.variable.variableName === "Gage height, ft") {
+        if (hasGageHeight(element)) {
             if( first ===true){
                 first = false;
                 line = "";
